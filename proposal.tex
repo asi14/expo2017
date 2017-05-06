@@ -1,0 +1,45 @@
+\documentclass{article}
+
+\title{Determining the Complexity of Parallel Circuits: A Proposal}
+\date{May 2017}
+\author{Brian Lee}
+\usepackage{circuitikz}
+\usepackage{wrapfig}
+\usepackage[margin=1.0in]{geometry}
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+%.. add detailed explanation of what constitutes 'P' - completeness
+The goal of the experiment is to determine if Parallel Circuits are $NP$-Complete or $P$-Complete. For this purpose, parallel circuits will be augmented with switches, which will be modelled in a computer program's logic flow. To start, three parallel circuits are to be constructed, consisting of 1,2, and 3 resistors respectively. From there, induction will be utilized to attempt to prove that the number of resistors can go up to infinity. The experiment is a form of inquiry into the prospect of modelling circuits using computers, which has numerous potential applications. It will also attempt to speculate, depending on the results, if $P=NP$.
+\end{abstract}
+
+\section{Introduction}
+\subsection{Parallel Circuits}
+A \textbf{Parallel Circuit} is a variation of circuit that, in its most elemental version, separates $I_{net}$ into separate branches, dedicating a resistor for each branch. The general idea behind a parallel circuit is that each resistor recieves an independent supply of $I$, such that if one resistor loses $I$, the other resistors maintain $I$. The following relationships are derivable using Olm's Law ($V=IR$):\\ %.. needs citation
+\begin{center}
+\begin{minipage}[c]{0.4\textwidth}
+$$V_{net} = V_{1} = V_{2} = ... = V_{n}$$
+$$I_{net} = \Sigma I_{n}$$
+$$\frac{1}{R_{net}} = \Sigma \frac{1}{R_{n}}$$
+\end{minipage}
+\begin{minipage}[c]{0.4\textwidth}
+\begin{circuitikz}
+	\draw
+	(0,0) to[battery] (0,2) -- (3,2)
+	to[R] (3,0) -- (0,0);
+	\draw
+	(1,2) to[R] (1,0);
+	\draw
+	(2,2) to[R] (2,0);
+\end{circuitikz}
+\end{minipage}
+\end{center}
+Several unique properties emerge if $V$, $I$, and $R$ values are tracked over changes made to the circuit, such as removing/adding a resistor, changing $V$, etc. Those systematic changes will become central to the experiment. %.. insert citation
+\begin{thebibliography}{9}
+
+\end{thebibliography}
+
+\end{document}
+
