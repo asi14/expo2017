@@ -19,13 +19,13 @@ The goal of the experiment is to determine if Parallel Circuits are $NP$-Complet
 \subsection{Parallel Circuits}
 A \textbf{Parallel Circuit} is a variation of circuit that, in its most elemental version, separates $I_{net}$ into separate branches, dedicating a resistor for each branch. The general idea behind a parallel circuit is that each resistor recieves an independent supply of $I$, such that if one resistor loses $I$, the other resistors maintain $I$. The following relationships are derivable using Olm's Law ($V=IR$):\\ %.. needs citation
 \begin{center}
-\begin{minipage}[c]{0.4\textwidth}
+\begin{minipage}[c]{0.5\textwidth}
 $$V_{net} = V_{1} = V_{2} = ... = V_{n}$$
 $$I_{net} = \Sigma I_{n}$$
 $$\frac{1}{R_{net}} = \Sigma \frac{1}{R_{n}}$$
 \end{minipage}
 \begin{minipage}[c]{0.4\textwidth}
-\begin{circuitikz}
+\begin{circuitikz} %.. need to add caption here
 	\draw
 	(0,0) to[battery] (0,2) -- (3,2)
 	to[R] (3,0) -- (0,0);
