@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.5.6)  6 MAY 2017 23:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.5.6)  6 MAY 2017 23:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -564,7 +564,7 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 Here is how much of TeX's memory you used:
  19284 strings out of 494946
  440020 string characters out of 6181041
- 589745 words of memory out of 5000000
+ 589808 words of memory out of 5000000
  22288 multiletter control sequences out of 15000+600000
  9461 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -583,7 +583,7 @@ lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on proposal.pdf (2 pages, 163743 bytes).
+Output written on proposal.pdf (2 pages, 163895 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
