@@ -7,7 +7,9 @@
 \usepackage{wrapfig}
 \usepackage[margin=1.0in]{geometry}
 \usepackage{listings}
+\usepackage{float}
 \begin{document}
+
 
 \maketitle
 
@@ -44,13 +46,26 @@ The biggest motivation for this experiment was the opportuntiy to utilize Theore
 It is worth noting that a formalized procedure is yet to bee concieved of. The general course of the experimental design has been concieved of, but issues regarding implementation of the design must be resolved.
 
 In any case, the general course of the experiment follows a few steps. First, concrete paralell circuits are constructed, with $V$, $I$, and $R$ changes recorded. Switches will be added to the circuit to construt logical gatess and facilitate the rest of the math moving forward. This will serve as the basis for an eventual proof of induction to isolate some $O(n^{k})$ out of the data (notably as the base case). If this is successfull, a computer program modelling the circuits will next be constructed. If this is not successfull, additional experimentation will be necessary to isolate that the procedure yielded $NP$-Complete, as opposed to a mere fluke.
+
+As for the hypothesis, there is no definitive hypothesis as of now the experiment has, but it will most likely be "Parallel Circuits exhiit signs of $P$-Completeness which strongly indicate as such."
 \section{Appendix} 
 \lstinputlisting[language=Python, caption = Sequential Search]{seqsearch.py}
-\begin{center}
+\begin{figure}[H]
+	\centering
+	\caption{Example Parallel Circuit constructed as part of experiment}
 	\begin{circuitikz}
-		
+		\draw
+			(0,0) to [battery] (0,2)
+			to[switch] (2,2)
+			to[switch] (4,2)
+			to[switch] (6,2)
+			to[R](6,0) -- (0,0);		
+		\draw
+			(2,2) to[R] (2,0);
+		\draw
+			(4,2) to[R] (4,0);
 	\end{circuitikz}
-\end{center}
+\end{figure}
 \medskip
 
 \bibliographystyle{unsrt}
