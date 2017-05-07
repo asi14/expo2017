@@ -15,7 +15,7 @@
 
 \begin{abstract}
 %.. add detailed explanation of what constitutes 'P' - completeness
-The goal of the experiment is to determine if Parallel Circuits are $NP$-Complete or $P$-Complete. For this purpose, parallel circuits will be augmented with switches, which will be modelled in a computer program's logic flow. To start, three parallel circuits are to be constructed, consisting of 1,2, and 3 resistors respectively. From there, induction will be utilized to attempt to prove that the number of resistors can go up to infinity. The experiment is a form of inquiry into the prospect of modelling circuits using computers, which has numerous potential applications. It will also attempt to speculate, depending on the results, if $P=NP$.
+The goal of the experiment is to determine if Parallel Circuits are \textbf{P}-Complete or \textbf{NP}-Complete. For this purpose, parallel circuits will be augmented with switches, which will be modelled in a computer program's logic flow. To start, three parallel circuits are to be constructed, consisting of 1,2, and 3 resistors respectively. From there, induction will be utilized to attempt to prove that the number of resistors can go up to infinity. The experiment is a form of inquiry into the prospect of modelling circuits using computers, which has numerous potential applications. It will also attempt to speculate, depending on the results, if $P=NP$.
 \end{abstract}
 
 \section{Introduction}
@@ -23,11 +23,11 @@ Given that the experiment incorporates some higher-level concepts within Compute
 \subsection{Computational Complexity Theory}
 Computational Complexity Theory is a branch of Theoretical Computer Science that asks the question of \textit{how hard} certain problems are (in terms of efficiency in solvency). There are two general classes of problems: the first consists of problems that \textit{are} easily processed (by a computer), and has a set runtime of $O(n^{k})$ (in other words, a static polynomial function). Problems here reside within the complexity class \textbf{P} (Polynomial Time), and are described as 'P-Complete.'\cite{michiel}
 
-For example, Consider a computer program that compares an input value with each number of an array of numbers.\footnote{Code is available in the appendix} It would be classified as $P-Complete$ as it has a set runtime of $O(n)$ (the program goes through all the numbers in the array). Almost all the software a typical person uses is composed of $P-Complete$ altorithims (e.g. Microsoft Office).
+For example, Consider a computer program that compares an input value with each number of an array of numbers.\footnote{Code is available in the appendix} It would be classified as $P-Complete$ as it has a set runtime of $O(n)$ (the program goes through all the numbers in the array). Almost all the software a typical person uses is composed of \textbf{P}-Complete altorithims (e.g. Microsoft Office).
 
-The other complexity class composes of problems that are \textit{hard} for a computer to solve. There is no distinct $O(n^{k})$. Rather, a computer can \textit{check} solutions to the problem in $P$-time. Problems of this class are said to be $NP$-Complete, or 'Non-Deterministic Polynomial Time.' %.. insert deterministic explanation
+The other complexity class composes of problems that are \textit{hard} for a computer to solve. There is no distinct $O(n^{k})$. Rather, a computer can \textit{check} solutions to the problem in $P$-time. Problems of this class are said to be \textbf{NP}-Complete, or 'Non-Deterministic Polynomial Time.' %.. insert deterministic explanation
 
-A good example of a $NP$-Complete problem is Minesweeper. This conceptually fits: a computer won't be able to exactly model problems based on \textit{random chance} (such as the mines' locations); there will always be scenarios where the algorithim is wrong.\cite{mine} This further implies that computers can't model \textit{everything}. 
+A good example of a \textbf{NP}-Complete problem is Minesweeper. This conceptually fits: a computer won't be able to exactly model problems based on \textit{random chance} (such as the mines' locations); there will always be scenarios where the algorithim is wrong.\cite{mine} This further implies that computers can't model \textit{everything}. 
 \subsection{Physics}
 The aformentioned Computer Science terminology/concepts will be utilized to examine one type of circuit commonly tested on the AP Physics 1 Exam: the parallel circuit.\cite{college} Conceptually speaking, they separate $I$ into smaller branches and, in its most fundamental variation, dedicates a single resistor to reach branch.\footnote{Circuit diagrams of parallel circuits are available in the appendix}%.. insert citation
  The following equations relating $V$, $I$, and $R$ are derivable using Olm's Law ($V=IR$): %.. insert citation
@@ -39,13 +39,13 @@ A very common variant of question on the AP Physics 1 Exam for parallel circuits
 These properties of change will become instrumental to the experiment, as they will enable Computer Science to effectively test parallel circuits.
 \section{Experimental Structure}
 \subsection{Goals}
-The primary goal of the experiment is to determine if parallel circuits are $P$-Complete, $NP$-Complete, or some variant of the two. It will follow the path previous computer scientists have taken in proving problems to be $P$ or $NP$\cite{mine}, primarily via the usage of logic gates. 
+The primary goal of the experiment is to determine if parallel circuits are \textbf{P}-Complete, \textbf{NP}-Complete, or some variant of the two. It will follow the path previous computer scientists have taken in proving problems to be \textbf{P} or \textbf{NP}\cite{mine}, primarily via the usage of logic gates. 
 
-The biggest motivation for this experiment was the opportuntiy to utilize Theoretical Computer Science, but the experiment may also reasonably explain why parallel circuits (and other circuits) are so prevalent in electronics (the possibility of $P$-Completeness would explain this very well).
+The biggest motivation for this experiment was the opportuntiy to utilize Theoretical Computer Science, but the experiment may also reasonably explain why parallel circuits (and other circuits) are so prevalent in electronics (the possibility of \textbf{P} -Completeness would explain this very well).
 \subsection{Procedure (Conceptual)}
 It is worth noting that a formalized procedure is yet to bee concieved of. The general course of the experimental design has been concieved of, but issues regarding implementation of the design must be resolved.
 
-In any case, the general course of the experiment follows a few steps. First, concrete paralell circuits are constructed, with $V$, $I$, and $R$ changes recorded. Switches will be added to the circuit to construt logical gatess and facilitate the rest of the math moving forward. This will serve as the basis for an eventual proof of induction to isolate some $O(n^{k})$ out of the data (notably as the base case). If this is successfull, a computer program modelling the circuits will next be constructed. If this is not successfull, additional experimentation will be necessary to isolate that the procedure yielded $NP$-Complete, as opposed to a mere fluke.
+In any case, the general course of the experiment follows a few steps. First, concrete paralell circuits are constructed, with $V$, $I$, and $R$ changes recorded. Switches will be added to the circuit to construt logical gatess and facilitate the rest of the math moving forward. This will serve as the basis for an eventual proof of induction to isolate some $O(n^{k})$ out of the data (notably as the base case). If this is successfull, a computer program modelling the circuits will next be constructed. If this is not successfull, additional experimentation will be necessary to isolate that the procedure yielded \textbf{NP}-Complete, as opposed to a mere fluke.
 
 As for the hypothesis, there is no definitive hypothesis as of now the experiment has, but it will most likely be "Parallel Circuits exhiit signs of $P$-Completeness which strongly indicate as such."
 \section{Appendix} 
