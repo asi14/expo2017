@@ -6,6 +6,7 @@
 \usepackage{circuitikz}
 \usepackage{wrapfig}
 \usepackage[margin=1.0in]{geometry}
+\usepackage{listings}
 \begin{document}
 
 \maketitle
@@ -16,31 +17,24 @@ The goal of the experiment is to determine if Parallel Circuits are $NP$-Complet
 \end{abstract}
 
 \section{Introduction}
-\subsection{Parallel Circuits}
-A \textbf{Parallel Circuit} is a variation of circuit that, in its most elemental version, separates $I_{net}$ into separate branches, dedicating a resistor for each branch. The general idea behind a parallel circuit is that each resistor recieves an independent supply of $I$, such that if one resistor loses $I$, the other resistors maintain $I$. The following relationships are derivable using Olm's Law ($V=IR$):\\ %.. needs citation
-\begin{center}
-\begin{minipage}[c]{0.5\textwidth}
-$$V_{net} = V_{1} = V_{2} = ... = V_{n}$$
-$$I_{net} = \Sigma I_{n}$$
-$$\frac{1}{R_{net}} = \Sigma \frac{1}{R_{n}}$$
-\end{minipage}
-\begin{minipage}[c]{0.4\textwidth}
-\begin{circuitikz} %.. need to add caption here
-	\draw
-	(0,0) to[battery] (0,2) -- (3,2)
-	to[R] (3,0) -- (0,0);
-	\draw
-	(1,2) to[R] (1,0);
-	\draw
-	(2,2) to[R] (2,0);
-\end{circuitikz}
-\end{minipage}
-\end{center}
-Several unique properties emerge if $V$, $I$, and $R$ values are tracked over changes made to the circuit, such as removing/adding a resistor, changing $V$, etc. Those systematic changes will become central to the experiment. %.. insert citation
+Given that the experiment incorporates some higher-level concepts within Computer Science, it's appropriate to outline them here for a proper grasp of the experiment's goals/function. Please note, however, that the following is a low-level overview meant for a basic understanding. The final paper will approach Computer Science on a substantially more formal level. 
 \subsection{Computational Complexity Theory}
-\begin{thebibliography}{9}
+Computational Complexity Theory is a branch of Theoretical Computer Science that asks the question of \textit{how hard} certain problems are (in terms of efficiency in solvency). There are two general classes of problems: the first consists of problems that \textit{are} easily processed (by a computer), and has a set runtime of $O(n^{k})$ (in other words, a static polynomial function). Problems here reside within the complexity class \textbf{P} (Polynomial Time), and are described as 'P-Complete.'\cite{michiel}
 
-\end{thebibliography}
+For example, Consider a computer program that compares an input value with each number of an array of numbers.\footnote{Code is available in the appendix} It would be classified as $P-Complete$ as it has a set runtime of $O(n)$ (the program goes through all the numbers in the array). Almost all the software a typical person uses is composed of $P-Complete$ altorithims (e.g. Microsoft Office).
+
+The other complexity class composes of problems that are \textit{hard} for a computer to solve. There is no distinct $O(n^{k})$. Rather, a computer can \textit{check} solutions to the problem in $P$-time. Problems of this class are said to be $NP$-Complete, or 'Non-Deterministic Polynomial Time.' %.. insert deterministic explanation
+
+A good example of a $NP$-Complete problem is Minesweeper. This conceptually fits: a computer won't be able to exactly model problems based on \textit{random chance} (such as the mines' locations); there will always be scenarios where the algorithim is wrong.\cite{mine} This further implies that computers can't model \textit{everything}.
+\section{Appendix} 
+\lstinputlisting[language=Python, caption = Sequential Search]{seqsearch.py}
+
+\medskip
+
+\bibliographystyle{unsrt}
+\bibliography{citations}
+
+
 
 \end{document}
 
