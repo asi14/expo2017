@@ -1,0 +1,7 @@
+Experiment Structure:
+1) construct live parallel circuits and use voltmeters/ammeters/switches to simulate logic circuits
+
+2) use induction to simulate some kind of program
+3) construct some kind of O(n) from it
+4) prove P-Complete?
+
